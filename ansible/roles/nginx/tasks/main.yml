@@ -12,3 +12,12 @@
     name: nginx
     cache_valid_time: 3600
     update_cache: yes
+- name: Delete Default Symlink
+  file:
+    path: /etc/nginx/site-enabled/defaults
+    state: absent
+
+- name: Delete Default
+  file:
+    path: /etc/nginx/site-available/defaults
+    state: absent
