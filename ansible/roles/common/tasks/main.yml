@@ -8,8 +8,8 @@
 
 - name: Install cool basic monitoring stuff
   apt:
-    name: "{{ item }}"
-    state: installed
+    name: {{ item }}
+    update_cache: yes
   with_items:
     - htop
     - nload
