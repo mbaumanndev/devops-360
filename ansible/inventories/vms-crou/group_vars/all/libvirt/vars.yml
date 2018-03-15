@@ -1,8 +1,9 @@
 ---
 
-libvirt_dns_server: 172.16.114.254
-libvirt_ip_prefix: '172.16.114'
-libvirt_dns_zone: dell114.u13.org
+
+libvirt_dns_server: 172.16.111.254
+libvirt_ip_prefix: '172.16.111'
+libvirt_dns_zone: dell111.u13.org
 
 libvirt_vms:
   00.webserver:
