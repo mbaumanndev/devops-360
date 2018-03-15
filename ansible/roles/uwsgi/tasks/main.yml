@@ -8,7 +8,12 @@
   with_items:
     - build-essential
     - python
-    - python-dev
+
+- name: Install Pip
+  - easy_install:
+      name: pip
+      state: latest
+      
 - name: Install uWSGI
   pip:
     name: uwsgi
