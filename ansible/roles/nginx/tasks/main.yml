@@ -14,10 +14,10 @@
     update_cache: yes
 - name: Delete Default Symlink
   file:
-    path: /etc/nginx/site-enabled/defaults
+    path: /etc/nginx/site-enabled/default
     state: absent
 
 - name: Delete Default
   file:
-    path: /etc/nginx/site-available/defaults
+    path: /etc/nginx/site-available/default
     state: absent
