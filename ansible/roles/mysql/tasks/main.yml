@@ -24,15 +24,15 @@
     name: root
     password: "{{ mysql_root_password }}"
 
-- name: Create MySQL app user
-  mysql_user:
-    name: "{{ mysql_app_user }}"
-    password: "{{ mysql_app_password }}"
-    host: "%"
-
 - name: Copy MySQL Credentials
   template:
     src: templates/.my.cnf
     dest: ~/.my.cnf
     owner: root
     mode: 0600
+
+- name: Create MySQL app user
+  mysql_user:
+    name: "{{ mysql_app_user }}"
+    password: "{{ mysql_app_password }}"
+    host: "%"
