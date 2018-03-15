@@ -1,5 +1,14 @@
 ---
 # tasks file for uwsgi
+
+- name: Install Python Build
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - build-essential
+    - python
+    - python-dev
 - name: Install uWSGI
   pip:
     name: uwsgi
