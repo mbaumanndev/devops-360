@@ -8,13 +8,13 @@
 
 - name: Install cool basic monitoring stuff
   apt:
-    name: {{ item }}
+    name: "{{ item }}"
     update_cache: yes
   with_items:
     - htop
     - nload
     - telnet
-    - netstat
+    - net-tools
     - ntp
     - git
 
