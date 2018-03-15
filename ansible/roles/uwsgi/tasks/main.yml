@@ -1,2 +1,5 @@
 ---
 # tasks file for uwsgi
+- name: Install uWSGI
+  pip:
+    name: uwsgi
