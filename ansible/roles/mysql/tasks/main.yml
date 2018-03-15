@@ -25,10 +25,10 @@
     password: "{{ mysql_root_password }}"
 
 - name: Create MySQL app user
-    mysql_user:
-      name: "{{ mysql_app_user }}"
-      password: "{{ mysql_app_password }}"
-      host: "%"
+  mysql_user:
+    name: "{{ mysql_app_user }}"
+    password: "{{ mysql_app_password }}"
+    host: "%"
 
 - name: Copy MySQL Credentials
   template:
