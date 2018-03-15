@@ -1,0 +1,7 @@
+---
+
+- name: Clone dat repo into /opt/devops-360-webapp
+  git:
+    repo: 'https://github.com/Lowess/devops-360-webapp.git'
+    dest: /opt
+    version: {{ webapp_version }}
